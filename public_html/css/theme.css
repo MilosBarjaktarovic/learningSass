@@ -12,10 +12,10 @@ $btn-dark:    $black;*/
   display: inline-block;
   padding: 10px 25px;
   border: none;
-  border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -o-border-radius: 0px;
+  border-radius: 5px 0 5px 0;
+  -moz-border-radius: 5px 0 5px 0;
+  -vebkit-border-radius: 5px 0 5px 0;
+  -o-border-radius: 5px 0 5px 0;
   cursor: pointer;
 }
 
@@ -475,6 +475,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-family: "Josefin Sans", sans-serif;
   color: #c215bf;
+  margin-top: 0px;
 }
 
 header {
@@ -548,13 +549,31 @@ header nav ul li a:hover, header nav ul li a.active {
   padding: 30px 0 30px;
   background-color: #ffffff;
 }
-.comment-section .comment-img img {
-  border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -o-border-radius: 0px;
+.comment-section .comment-list {
+  list-style: none;
+  padding: 0;
+}
+.comment-section .comment-list .comment-item {
+  display: flex;
+}
+.comment-section .comment-list .comment-item .comment-img {
+  flex: 0 0 50px;
+}
+.comment-section .comment-list .comment-item .comment-img img {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.comment-section .comment-list .comment-item .comment-body {
+  padding-left: 10px;
 }
 
+@media (min-width: 768px) {
+  .comment-section .comment-list .comment-img {
+    flex: 0 0 90px !important;
+  }
+}
 .course-section {
   padding: 30px 0 30px;
   background-color: transparent;
@@ -589,6 +608,36 @@ header nav ul li a:hover, header nav ul li a.active {
 .contact-section {
   padding: 150px 0 150px;
   background-color: #ffffff;
+  background-image: url(assets/contact.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+}
+.contact-section h2 {
+  text-align: center;
+}
+.contact-section .contact-form {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+.contact-section .contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.contact-section .contact-form .form-group label {
+  display: block;
+}
+.contact-section .contact-form .form-group .form-control {
+  display: block;
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 0px 10xp;
+  line-height: 4rem;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 footer {
